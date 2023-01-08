@@ -1,38 +1,39 @@
 #обычная функция
-#def print_text():
-#    name = input('Введите свое имя: ')
-#    print(f'Привет, {name}!')
+def print_text():
+    name = input('Введите свое имя: ')
+    print(f'Привет, {name}!')
 
-#print_text()
+print_text()
 
 #функция принимающая
-#def summa(a,b):
-#    print(f'Сумма чисел: {a+b}')
+def summa(a,b):
+    print(f'Сумма чисел: {a+b}')
 
-#num1 = int(input('Введи первое число: '))
-#num2 = int(input('Введи второе число: '))
+num1 = int(input('Введи первое число: '))
+num2 = int(input('Введи второе число: '))
 
-#summa(num1,num2)
-#summa(100, 57)
+summa(num1,num2)
+summa(100, 57)
 
 #функция возвращающая
-#def div(x,y):
-#    s = x/y
-#    return s
+def div(x,y):
+    s = x/y
+    return s
 
-#result = div(150, 25)
-#print(result)
+result = div(150, 25)
+print(result)
 
-#создание файлов
-#file = open('test.txt', 'w')
-#file.write('ANDROMEDA')
-#file.close()
-#file = open('test.txt', 'r')
-#data = file.read()
-#file.close()
+#работа с файлами
+file = open('test.txt', 'w')
+file.write('ANDROMEDA')
+file.close()
+file = open('test.txt', 'r')
+data = file.read()
+file.close()
 
-#print(data)
+print(data)
 
-#with open('test.txt', 'r') as file1:
-#    data1 = file1.read()
-#    print(data1)
+#еще один способ работы с файлами
+with open('test.txt', 'r') as file1:
+    data1 = file1.read()
+    print(data1)
