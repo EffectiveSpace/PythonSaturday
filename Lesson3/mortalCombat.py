@@ -41,16 +41,22 @@ hit = 0
 while True:
     hit+=1
     print(f'\nУдар {hit}')
-    enemy2.health = enemy1.attack(enemy2)
-    enemy1.health = enemy2.attack(enemy1)
-    time.sleep(1)
-    coin = random.randint(1,2)
-    if enemy1.mana > 7 or enemy2.mana >7:
-        if coin == 1:
+    if random.randint(1,5) in [1,2,3]:
+        if enemy1.mana > 7:
             enemy2.health = enemy1.super_attack(enemy2)
-        if coin == 2:
+        else:
+            enemy2.health = enemy1.attack(enemy2)
+    else:
+        print(f'{enemy1.name} промахнулся')
+    time.sleep(1)
+    if random.randint(1,2) == 1:
+        if enemy2.mana > 7:
             enemy1.health = enemy2.super_attack(enemy1)
-
+        else:
+            enemy1.health = enemy2.attack(enemy1)
+    else:
+        print(f'{enemy2.name} промахнулся')
+    time.sleep(2)
     if enemy2.health <= 0 and enemy1.health <= 0:
         print('Ничья')
         break
