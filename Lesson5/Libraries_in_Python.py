@@ -2,9 +2,10 @@
 #пример использования библиотеки easyGui
 import easygui
 
+
 #инициализация функции чтения
 def read_file(name):
-    with open(name, 'r') as f:
+    with open(name, 'r', encoding='utf-8') as f:
         data = f.read()
     return data
 
