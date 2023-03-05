@@ -20,7 +20,8 @@ class GameWindow(arcade.Window):
 class Ball(arcade.Sprite):
     def update(self):
         self.center_x += self.change_x
-
+        if self.right > 600 or self.left < 0:
+            self.change_x = -self.change_x
 
 window = GameWindow(600, 600, 'Ping-Pong')
 arcade.run()
